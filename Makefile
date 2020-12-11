@@ -1,4 +1,4 @@
-DIST_NAME = TODO-PACKAGE-NAME
+DIST_NAME = shader
 
 SCRIPT_FILES = \
 	src/index.ts

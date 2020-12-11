@@ -4,9 +4,9 @@ module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "TODO-PACKAGE-NAME.js",
+    filename: "shader.js",
     globalObject: "this",
-    library: "TODO-PACKAGE-NAME",
+    library: "shader",
     libraryTarget: "umd",
   },
   module: {
