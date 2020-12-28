@@ -12,7 +12,7 @@ import {ignoreGLErrors} from 'parsegraph-checkglerror';
  * @param {string} shaderName The name used for debugging
  * @return {!WebGLShader} The shader.
  */
-export function compileShader(gl, shaderSource, shaderType, shaderName) {
+export function compileShader(gl:WebGLRenderingContext, shaderSource:string, shaderType:number, shaderName?:string):WebGLShader {
   // Create the shader object
   const shader = gl.createShader(shaderType);
 
@@ -49,7 +49,7 @@ export function compileShader(gl, shaderSource, shaderType, shaderName) {
  * @param {WebGLShader} fragmentShader A fragment shader.
  * @return {WebGLProgram} A program.
  */
-export function createProgram(gl, vertexShader, fragmentShader) {
+export function createProgram(gl:WebGLRenderingContext, vertexShader:WebGLShader, fragmentShader:WebGLShader):WebGLProgram {
   // create a program.
   const program = gl.createProgram();
 
@@ -75,14 +75,14 @@ export function createProgram(gl, vertexShader, fragmentShader) {
  *
  * @param {!WebGLRenderingContext} gl The WebGL Context.
  * @param {string} scriptId The id of the script tag.
- * @param {string} optShaderType The type of shader to create.
+ * @param {number} optShaderType The type of shader to create.
  *     If not passed in will use the type attribute from the
  *     script tag.
  * @return {!WebGLShader} A shader.
  */
-export function createShaderFromScriptTag(gl, scriptId, optShaderType) {
+export function createShaderFromScriptTag(gl:WebGLRenderingContext, scriptId:string, optShaderType?:number):WebGLShader {
   // look up the script tag by id.
-  const shaderScript = document.getElementById(scriptId);
+  const shaderScript = (document.getElementById(scriptId) as HTMLScriptElement);
   if (!shaderScript) {
     throw new Error('*** Error: unknown script element: ' + scriptId);
   }
@@ -113,7 +113,7 @@ export function createShaderFromScriptTag(gl, scriptId, optShaderType) {
  * @param {string} fragmentShaderId The id of the fragment shader script tag.
  * @return {!WebGLProgram} A program
  */
-export function createProgramFromScripts(gl, vertexShaderId, fragmentShaderId) {
+export function createProgramFromScripts(gl:WebGLRenderingContext, vertexShaderId:string, fragmentShaderId:string):WebGLProgram {
   const vertexShader = createShaderFromScriptTag(gl, vertexShaderId);
   const fragmentShader = createShaderFromScriptTag(gl, fragmentShaderId);
   return createProgram(gl, vertexShader, fragmentShader);
