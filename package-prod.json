@@ -1,0 +1,17 @@
+{
+    "name": "parsegraph-shader",
+    "version": "1.4.2",
+    "description": "shader",
+    "main": "dist/parsegraph-shader.js",
+    "types": "dist/parsegraph-shader.d.ts",
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/parsegraph/shader.git"
+    },
+    "author": "Rainback, Inc.",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/parsegraph/shader/issues"
+    },
+    "homepage": "https://github.com/parsegraph/shader#readme"
+  }
