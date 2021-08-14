@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm install --no-save parsegraph-checkglerror
+    - run: npm install --no-save parsegraph-checkglerror@1.4.7-dev
     - run: make tar
     - uses: actions/upload-artifact@v2
       with:
