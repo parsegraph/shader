@@ -1,6 +1,6 @@
 {
   "name": "parsegraph-shader",
-  "version": "1.4.10-dev",
+  "version": "1.4.11-dev",
   "description": "shader",
   "main": "dist/parsegraph-shader.js",
   "types": "dist/parsegraph-shader.d.ts",
@@ -72,10 +72,12 @@
     "express": "^4.17.1",
     "glslify-loader": "^2.0.0",
     "openssl": "^1.1.0",
-    "parsegraph-checkglerror": "^1.4.6-dev",
     "parsegraph-testsuite": "^1.4.3",
     "raw-loader": "^4.0.1",
     "ts-mocha": "^8.0.0",
     "webgl-mock": "^0.1.7"
+  },
+  "peerDependencies": {
+    "parsegraph-checkglerror": "^1.4.7-dev"
   }
 }
