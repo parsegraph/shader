@@ -1,6 +1,6 @@
 {
   "name": "parsegraph-shader",
-  "version": "1.4.12-dev",
+  "version": "1.4.13-dev",
   "description": "shader",
   "main": "dist/parsegraph-shader.js",
   "types": "dist/parsegraph-shader.d.ts",
@@ -78,6 +78,6 @@
     "webgl-mock": "^0.1.7"
   },
   "peerDependencies": {
-    "parsegraph-checkglerror": "^1.4.7-dev"
+    "parsegraph-checkglerror": "^1.4.8"
   }
 }
