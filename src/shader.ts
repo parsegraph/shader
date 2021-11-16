@@ -1,4 +1,4 @@
-import {ignoreGLErrors} from 'parsegraph-checkglerror';
+import { ignoreGLErrors } from "parsegraph-checkglerror";
 
 // The following methods were based on code from webglfundamentals.org:
 
@@ -12,7 +12,12 @@ import {ignoreGLErrors} from 'parsegraph-checkglerror';
  * @param {string} shaderName The name used for debugging
  * @return {!WebGLShader} The shader.
  */
-export function compileShader(gl:WebGLRenderingContext, shaderSource:string, shaderType:number, shaderName?:string):WebGLShader {
+export function compileShader(
+  gl: WebGLRenderingContext,
+  shaderSource: string,
+  shaderType: number,
+  shaderName?: string
+): WebGLShader {
   // Create the shader object
   const shader = gl.createShader(shaderType);
 
@@ -29,12 +34,12 @@ export function compileShader(gl:WebGLRenderingContext, shaderSource:string, sha
     if (!success) {
       // Something went wrong during compilation; get the error
       throw new Error(
-          'Could not compile ' +
-          (shaderType === gl.FRAGMENT_SHADER ? 'fragment' : 'vertex') +
-          ' shader ' +
+        "Could not compile " +
+          (shaderType === gl.FRAGMENT_SHADER ? "fragment" : "vertex") +
+          " shader " +
           shaderName +
-          ': ' +
-          gl.getShaderInfoLog(shader),
+          ": " +
+          gl.getShaderInfoLog(shader)
       );
     }
   }
@@ -50,7 +55,11 @@ export function compileShader(gl:WebGLRenderingContext, shaderSource:string, sha
  * @param {WebGLShader} fragmentShader A fragment shader.
  * @return {WebGLProgram} A program.
  */
-export function createProgram(gl:WebGLRenderingContext, vertexShader:WebGLShader, fragmentShader:WebGLShader):WebGLProgram {
+export function createProgram(
+  gl: WebGLRenderingContext,
+  vertexShader: WebGLShader,
+  fragmentShader: WebGLShader
+): WebGLProgram {
   // create a program.
   const program = gl.createProgram();
 
@@ -65,7 +74,7 @@ export function createProgram(gl:WebGLRenderingContext, vertexShader:WebGLShader
   const success = gl.getProgramParameter(program, gl.LINK_STATUS);
   if (!success) {
     // something went wrong with the link
-    throw new Error('program filed to link:' + gl.getProgramInfoLog(program));
+    throw new Error("program filed to link:" + gl.getProgramInfoLog(program));
   }
 
   return program;
@@ -81,11 +90,15 @@ export function createProgram(gl:WebGLRenderingContext, vertexShader:WebGLShader
  *     script tag.
  * @return {!WebGLShader} A shader.
  */
-export function createShaderFromScriptTag(gl:WebGLRenderingContext, scriptId:string, optShaderType?:number):WebGLShader {
+export function createShaderFromScriptTag(
+  gl: WebGLRenderingContext,
+  scriptId: string,
+  optShaderType?: number
+): WebGLShader {
   // look up the script tag by id.
-  const shaderScript = (document.getElementById(scriptId) as HTMLScriptElement);
+  const shaderScript = document.getElementById(scriptId) as HTMLScriptElement;
   if (!shaderScript) {
-    throw new Error('*** Error: unknown script element: ' + scriptId);
+    throw new Error("*** Error: unknown script element: " + scriptId);
   }
 
   // extract the contents of the script tag.
@@ -94,12 +107,12 @@ export function createShaderFromScriptTag(gl:WebGLRenderingContext, scriptId:str
   // If we didn't pass in a type, use the 'type' from
   // the script tag.
   if (!optShaderType) {
-    if (shaderScript.type == 'x-shader/x-vertex') {
+    if (shaderScript.type == "x-shader/x-vertex") {
       optShaderType = gl.VERTEX_SHADER;
-    } else if (shaderScript.type == 'x-shader/x-fragment') {
+    } else if (shaderScript.type == "x-shader/x-fragment") {
       optShaderType = gl.FRAGMENT_SHADER;
     } else if (!optShaderType) {
-      throw new Error('*** Error: shader type not set');
+      throw new Error("*** Error: shader type not set");
     }
   }
 
@@ -114,7 +127,11 @@ export function createShaderFromScriptTag(gl:WebGLRenderingContext, scriptId:str
  * @param {string} fragmentShaderId The id of the fragment shader script tag.
  * @return {!WebGLProgram} A program
  */
-export function createProgramFromScripts(gl:WebGLRenderingContext, vertexShaderId:string, fragmentShaderId:string):WebGLProgram {
+export function createProgramFromScripts(
+  gl: WebGLRenderingContext,
+  vertexShaderId: string,
+  fragmentShaderId: string
+): WebGLProgram {
   const vertexShader = createShaderFromScriptTag(gl, vertexShaderId);
   const fragmentShader = createShaderFromScriptTag(gl, fragmentShaderId);
   return createProgram(gl, vertexShader, fragmentShader);
