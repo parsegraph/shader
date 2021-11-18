@@ -1,6 +1,6 @@
 {
     "name": "parsegraph-shader",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "shader",
     "main": "dist/parsegraph-shader.js",
     "types": "dist/parsegraph-shader.d.ts",

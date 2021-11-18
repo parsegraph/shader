@@ -27,7 +27,6 @@ export function compileShader(
   // Compile the shader
   gl.compileShader(shader);
 
-  console.log("Checking Shaders" + ignoreGLErrors());
   // Check if it compiled
   if (!ignoreGLErrors()) {
     const success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
