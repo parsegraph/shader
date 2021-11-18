@@ -3,13 +3,9 @@ DIST_NAME = shader
 SCRIPT_FILES = \
 	src/$(DIST_NAME).ts
 
-DECLARATION_FILES = \
-	dist/parsegraph-$(DIST_NAME).d.ts \
-	dist/parsegraph-$(DIST_NAME).d.ts.map
-
 all: build lint test coverage esdoc
 
-build: dist/parsegraph-$(DIST_NAME).js $(DECLARATION_FILES)
+build: dist/parsegraph-$(DIST_NAME).js
 .PHONY: build
 
 build-prod: dist-prod/parsegraph-$(DIST_NAME).js
