@@ -2845,11 +2845,6 @@ parse5@5.1.1:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
   integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
-parsegraph-checkglerror@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/parsegraph-checkglerror/-/parsegraph-checkglerror-1.5.1.tgz#2ec0143978af5d86ec69fc4fee56a6711e70fbdd"
-  integrity sha512-7gU9/W9yZEFRVQ39ldE02e1r+N2cBh9LEWW91Az/SUxch1PV5N9t7CtB+0RdL46px/fDGSwWmzFc3VARCneuzg==
-
 path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
