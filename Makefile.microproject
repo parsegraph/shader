@@ -30,7 +30,7 @@ autobuild:
 .PHONY: autobuild
 
 install-deps:
-	yarn install --immutable --immutable-cache --check-cache
+	./install-deps.sh
 .PHONY: install-deps
 
 build-prod: $(PROD_LIB)
