@@ -1,7 +1,7 @@
 DIST_NAME = shader
 
 SCRIPT_FILES =  \
-	src/shader.ts \
+	src/index.ts \
 	src/demo.ts \
 	test/test.ts \
 	test/test.js
