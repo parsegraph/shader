@@ -1,10 +1,8 @@
-import { assert } from "chai";
-import todo from "../src/index";
+const assert = require("assert");
+import { compileShader } from "../dist/parsegraph-shader";
 
 describe("Package", function () {
   it("works", () => {
-    assert.equal(typeof todo(), "string");
-    console.log(todo());
-    assert.isTrue(todo().indexOf("Hello") >= 0);
+    assert.ok(compileShader);
   });
 });
