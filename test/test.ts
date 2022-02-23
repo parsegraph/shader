@@ -1,5 +1,5 @@
-const assert = require("assert");
-import { compileShader } from "../dist/parsegraph-shader";
+const { assert } = require("chai");
+import { compileShader } from "../src/index";
 
 describe("Package", function () {
   it("works", () => {
