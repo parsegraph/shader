@@ -3891,10 +3891,10 @@ parse5@6.0.1:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
 
-parsegraph-checkglerror@^1.5.4:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/parsegraph-checkglerror/-/parsegraph-checkglerror-1.5.4.tgz#684b2f80e29ac28b98570efaaa75bb9d25fc5f4b"
-  integrity sha512-VzFvBILMEMnH8WfCEC7f6aVAhIbLby/xrQ2HnaLkwiQL0rnJSYHiNrDoYC2hR4Tvg4k+Evmxi1RzV56s03Qbhw==
+parsegraph-checkglerror@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/parsegraph-checkglerror/-/parsegraph-checkglerror-1.5.5.tgz#10d83ffbc7aa4910945f2ff305c46c9a8805413b"
+  integrity sha512-7S//HGc5o6i2XwGt191CqQVAujH6sY14mxf+uWNzbiXOqeiQE6/x8GkDH5UuY++qdbuLdt8XCy2y/ESbkRLk1Q==
 
 path-exists@^3.0.0:
   version "3.0.0"
